@@ -1,7 +1,14 @@
 # Viterbi-Bigram-HMM-Parts-Of-Speech-Tagger
 
-There are three python files in this submission - Viterbi_POS_WSJ.py, Viterbi_Reduced_POS_WSJ.py and Viterbi_POS_Universal.py. All 3 files use the Viterbi Algorithm with Bigram HMM taggers for predicting Parts of Speech(POS) tags. The descriptions and outputs of each are given below:
-Viterbi_POS_WSJ.py ñ It uses the POS tags from the WSJ dataset as is. For the unknown words, the ëNNPí tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  With this rich tagset, the Viterbi algorithm improves over the baseline.
+There are three python files in this submission - 
+Viterbi_POS_WSJ.py, 
+Viterbi_Reduced_POS_WSJ.py and 
+Viterbi_POS_Universal.py. 
+
+All 3 files use the Viterbi Algorithm with Bigram HMM taggers for predicting Parts of Speech(POS) tags. The descriptions and outputs of each are given below:
+
+Viterbi_POS_WSJ.py ‚Äì It uses the POS tags from the WSJ dataset as is. For the unknown words, the ‚ÄòNNP‚Äô tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  With this rich tagset, the Viterbi algorithm improves over the baseline.
+
 Output
 Fraction of errors (Baseline) : 0.153846153846
 Fraction of errors (Viterbi): 0.0769230769231
@@ -9,22 +16,26 @@ Tags suggested by Baseline Algorithm: ['NNP', 'VBD', 'IN', 'VBN', 'NNP', 'VBN', 
 Tags suggested by Viterbi Algorithm: ['NNP', 'VBD', 'IN', 'VBD', 'NNP', 'VBN', 'TO', 'NNS', 'RB', 'CD', 'NN', 'IN', '.']
 Correct tags: ['NNP', 'VBD', 'WDT', 'VBD', 'NNP', 'VBN', 'TO', 'NNS', 'RB', 'CD', 'NN', 'IN', '.']
 
-Viterbi_Reduced_POS_WSJ.py ñ This uses the same WSJ dataset as before, however, the POS tags have been slightly simplified in the following way:
 
-['NN','NNS','NNP','NNPS'] -> ëNí
-['VB','VBD','VBG','VBN','VBP','VBZ'] -> ëVí
- ['JJ', 'JJR', 'JJS'] -> ëADJí
-['RB', 'RBR', 'RBS'] -> ëADVí
- ['PRP', 'PRP$', 'RP'] -> ëPROí
-For the unknown words, the ëNí tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  Notably, as the tags are simplified, accuracy improves for the baseline algorithm. And unlike the 1st case, the Viterbi algorithm does not improve over the baseline. 
+Viterbi_Reduced_POS_WSJ.py ‚Äì This uses the same WSJ dataset as before, however, the POS tags have been slightly simplified in the following way:
+
+['NN','NNS','NNP','NNPS'] -> ‚ÄòN‚Äô
+['VB','VBD','VBG','VBN','VBP','VBZ'] -> ‚ÄòV‚Äô
+ ['JJ', 'JJR', 'JJS'] -> ‚ÄòADJ‚Äô
+['RB', 'RBR', 'RBS'] -> ‚ÄòADV‚Äô
+ ['PRP', 'PRP$', 'RP'] -> ‚ÄòPRO‚Äô
+
+For the unknown words, the ‚ÄòN‚Äô tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  Notably, as the tags are simplified, accuracy improves for the baseline algorithm. And unlike the 1st case, the Viterbi algorithm does not improve over the baseline. 
+
 Output
 Fraction of errors (Baseline) : 0.0769230769231
 Fraction of errors (Viterbi): 0.0769230769231
+
 Tags suggested by Baseline Algorithm: ['N', 'V', 'IN', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
 Tags suggested by Viterbi Algorithm: ['N', 'V', 'IN', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
 Correct tags: ['N', 'V', 'WDT', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
 
-Viterbi_POS_Universal.py ñ This file runs the Viterbi algorithm on the ëgovernmentí category of the brown corpus, after building the bigram HMM tagger on the ënewsí category of the brown corpus. The assumption is that, since the two categories are somewhat related, training on one should give good performance on testing on the other. The tagset is the simplified ëuniversalí tagset. NLTK has been used to get the word tag pairs for each category but not for any other substantial purpose. For the unknown words, the ëNOUNí tag has been assigned. Assigning the most frequent tag based on transition probabilities gives a worse performance than assigning the ëNOUNí tag for unknown words.  Once again, on a simplified tagset, Viterbi shows no improvement over the baseline.  Since the algorithm is being run on a larger dataset, the time taken by the algorithm to train and run is also reported.
+Viterbi_POS_Universal.py ‚Äì This file runs the Viterbi algorithm on the ‚Äògovernment‚Äô category of the brown corpus, after building the bigram HMM tagger on the ‚Äònews‚Äô category of the brown corpus. The assumption is that, since the two categories are somewhat related, training on one should give good performance on testing on the other. The tagset is the simplified ‚Äòuniversal‚Äô tagset. NLTK has been used to get the word tag pairs for each category but not for any other substantial purpose. For the unknown words, the ‚ÄòNOUN‚Äô tag has been assigned. Assigning the most frequent tag based on transition probabilities gives a worse performance than assigning the ‚ÄòNOUN‚Äô tag for unknown words.  Once again, on a simplified tagset, Viterbi shows no improvement over the baseline.  Since the algorithm is being run on a larger dataset, the time taken by the algorithm to train and run is also reported.
 
 Output (Unknown word assigned tag based on transition probability)
  Fraction of errors (Baseline) : 0.0850150462798
@@ -33,7 +44,7 @@ Fraction of errors (Viterbi) : 0.0926166264957
 <Viterbi does worse than baseline>
 
 
-Output (Unknown word assigned tag ñ ìNOUNî)
+Output (Unknown word assigned tag ‚Äì ‚ÄúNOUN‚Äù)
 Fraction of errors (Baseline) : 0.0850150462798
 Fraction of errors (Viterbi) : 0.0850150462798
 8.8029999733 seconds
