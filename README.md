@@ -54,6 +54,8 @@ Fraction of errors (Viterbi) : 0.106664574925
 
 On this simplified tagset, Viterbi shows slight improvement over the base line.
 
+##Usage
+
 The  function fn_assign_POS_tags(words_list) can be imported from the file Viterbi_POS_Universal.py. An example usage is given below:
 
 >>> words_list = ["Sparta", "has" , "won", "at", "the", "end"]
