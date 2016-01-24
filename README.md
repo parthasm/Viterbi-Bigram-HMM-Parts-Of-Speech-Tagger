@@ -11,9 +11,13 @@ All 3 files use the Viterbi Algorithm with Bigram HMM taggers for predicting Par
 It uses the POS tags from the WSJ dataset as is. For the unknown words, the ‘NNP’ tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  With this rich tagset, the Viterbi algorithm improves over the baseline.
 
 Fraction of errors (Baseline) : 0.153846153846
+
 Fraction of errors (Viterbi): 0.0769230769231
+
 Tags suggested by Baseline Algorithm: ['NNP', 'VBD', 'IN', 'VBN', 'NNP', 'VBN', 'TO', 'NNS', 'RB', 'CD', 'NN', 'IN', '.']
+
 Tags suggested by Viterbi Algorithm: ['NNP', 'VBD', 'IN', 'VBD', 'NNP', 'VBN', 'TO', 'NNS', 'RB', 'CD', 'NN', 'IN', '.']
+
 Correct tags: ['NNP', 'VBD', 'WDT', 'VBD', 'NNP', 'VBN', 'TO', 'NNS', 'RB', 'CD', 'NN', 'IN', '.']
 
 ###Viterbi_Reduced_POS_WSJ.py
@@ -28,9 +32,13 @@ This uses the same WSJ dataset as before, however, the POS tags have been slight
 For the unknown words, the ‘N’ tag has been assigned. However, since the test sentence does not contain any word absent in the training document, tag assigned to the unknown words does not affect the accuracy of the Viterbi Algorithm.  Notably, as the tags are simplified, accuracy improves for the baseline algorithm. And unlike the 1st case, the Viterbi algorithm does not improve over the baseline.
 
 Fraction of errors (Baseline) : 0.0769230769231
+
 Fraction of errors (Viterbi): 0.0769230769231
+
 Tags suggested by Baseline Algorithm: ['N', 'V', 'IN', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
+
 Tags suggested by Viterbi Algorithm: ['N', 'V', 'IN', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
+
 Correct tags: ['N', 'V', 'WDT', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN', '.']
 
 
