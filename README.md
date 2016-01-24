@@ -62,7 +62,7 @@ The  function fn_assign_POS_tags(words_list) can be imported from the file Viter
 
 >>> tags_list
 
-['N', 'V', 'VN', 'P', 'DET', 'N']
+>>> ['N', 'V', 'VN', 'P', 'DET', 'N']
 
 >>> 
 
