@@ -54,6 +54,5 @@ Fraction of errors (Viterbi) : 0.106664574925
 
 On this simplified tagset, Viterbi shows slight improvement over the base line.
 
-#How to use this Parts of Speech Tagger in your code
-This file can be imported and its function fn_assign_POS_tags(words_list) can be directly used to get POS tags for words_list.
+The file Viterbi_POS_Universal.py can be imported and its function fn_assign_POS_tags(words_list) can be directly used to get POS tags for words_list.
 
