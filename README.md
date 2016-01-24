@@ -46,5 +46,14 @@ Correct tags: ['N', 'V', 'WDT', 'V', 'N', 'V', 'TO', 'N', 'ADV', 'CD', 'N', 'IN'
 ###Viterbi_POS_Universal.py
 This file runs the Viterbi algorithm on the ‘government’ category of the brown corpus, after building the bigram HMM tagger on the ‘news’ category of the brown corpus. The assumption is that, since the two categories are somewhat related, training on one should give good performance on testing on the other. The tagset is the simplified ‘universal’ tagset. NLTK has been used to get the word tag pairs for each category but not for any other substantial purpose. For the unknown words, the ‘N’ tag has been assigned. Assigning the most frequent tag based on transition probabilities gives a worse performance than assigning the ‘N’ tag for unknown words.Since the algorithm is being run on a larger dataset, the time taken by the algorithm to train and run is also reported.
 
+Fraction of errors (Baseline) : 0.106807193691
+
+Fraction of errors (Viterbi) : 0.106664574925
+
+7.50600004196 seconds
+
+On this simplified tagset, Viterbi shows slight improvement over the base line.
+
+#How to use this Parts of Speech Tagger in your code
 This file can be imported and its function fn_assign_POS_tags(words_list) can be directly used to get POS tags for words_list.
 
