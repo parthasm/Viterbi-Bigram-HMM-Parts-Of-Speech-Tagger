@@ -1,5 +1,9 @@
 # Viterbi-Bigram-HMM-Parts-Of-Speech-Tagger
 
+##Note:
+
+C++ implementation coming soon.
+
 There are three python files in this submission - 
 Viterbi_POS_WSJ.py, 
 Viterbi_Reduced_POS_WSJ.py and 
